@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "PurchaseOrderChanged",
+  "namespace": "com.rk.enterprise.erp",
+  "fields": [
+    { "name": "event_id", "type": "string" },
+    { "name": "event_time", "type": "string" },
+    { "name": "purchase_order_id", "type": "string" },
+    { "name": "supplier_id", "type": "string" },
+    { "name": "status", "type": "string" },
+    { "name": "amount", "type": "string" },
+    { "name": "currency", "type": "string" },
+    { "name": "source_system", "type": "string" }
+  ]
+}

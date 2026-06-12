@@ -1,0 +1,10 @@
+{
+  "event_id": "evt-001",
+  "event_time": "2026-06-12T09:00:00Z",
+  "purchase_order_id": "PO-10001",
+  "supplier_id": "SUP-445",
+  "status": "APPROVED",
+  "amount": "125000.00",
+  "currency": "USD",
+  "source_system": "legacy-erp"
+}

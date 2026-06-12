@@ -1,0 +1,12 @@
+flowchart LR
+    ERP["Legacy ERP"] --> CDC["Change Data Capture"]
+    CDC --> Kafka["Kafka Event Backbone"]
+    Kafka --> Flink["Flink Stream Processing"]
+    Flink --> Lakehouse["Data Lakehouse"]
+    Lakehouse --> VectorDB["Vector Database"]
+    VectorDB --> LLMApps["LLM Applications"]
+    Documents["Enterprise Documents"] --> Embeddings["Embedding Pipeline"]
+    Embeddings --> VectorDB
+    Governance["Governance, Policy, Audit"] -.-> Kafka
+    Governance -.-> Lakehouse
+    Governance -.-> LLMApps

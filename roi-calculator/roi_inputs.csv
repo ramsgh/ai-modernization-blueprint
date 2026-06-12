@@ -1,0 +1,7 @@
+category,input_name,example_value,notes
+labor_efficiency,hours_saved_per_month,500,Replace with workshop estimate
+labor_efficiency,average_loaded_hourly_cost,85,Do not commit client financials
+cycle_time,days_reduced_per_process,2,Estimate by workflow
+error_reduction,rework_cost_avoided_per_month,25000,Use sanitized placeholders only
+platform_reuse,duplicate_tooling_cost_avoided_per_year,150000,Public template placeholder
+risk_reduction,expected_annual_risk_reduction,100000,Use approved finance assumptions

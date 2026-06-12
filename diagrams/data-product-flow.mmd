@@ -1,0 +1,12 @@
+flowchart LR
+    Source["Operational Source"] --> Raw["Bronze Raw Events"]
+    Raw --> Clean["Silver Clean Events"]
+    Clean --> Product["Gold Data Product"]
+    Product --> Semantic["Semantic Layer"]
+    Product --> Embed["Embeddings"]
+    Embed --> Index["Vector Index"]
+    Semantic --> App["Analytics and AI Apps"]
+    Index --> App
+    Catalog["Data Catalog"] -.-> Raw
+    Catalog -.-> Clean
+    Catalog -.-> Product

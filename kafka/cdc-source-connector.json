@@ -1,0 +1,21 @@
+{
+  "name": "erp-purchase-order-cdc",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "database.hostname": "erp-db.internal.example.com",
+    "database.port": "5432",
+    "database.user": "${file:/opt/connect/secrets/erp.properties:username}",
+    "database.password": "${file:/opt/connect/secrets/erp.properties:password}",
+    "database.dbname": "erp",
+    "topic.prefix": "erp",
+    "schema.include.list": "procurement",
+    "table.include.list": "procurement.purchase_order",
+    "plugin.name": "pgoutput",
+    "slot.name": "erp_purchase_order_slot",
+    "publication.name": "erp_purchase_order_publication",
+    "tombstones.on.delete": "false",
+    "decimal.handling.mode": "string",
+    "include.schema.changes": "false"
+  }
+}

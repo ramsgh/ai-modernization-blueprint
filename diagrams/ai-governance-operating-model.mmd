@@ -1,0 +1,13 @@
+flowchart TB
+    Intake["Use Case Intake"] --> Risk["AI Risk Classification"]
+    Risk --> DataReview["Data and Privacy Review"]
+    DataReview --> Architecture["Architecture Review"]
+    Architecture --> Build["Build and Evaluate"]
+    Build --> Release["Controlled Release"]
+    Release --> Monitor["Monitor Quality, Cost, and Risk"]
+    Monitor --> Feedback["Human Feedback Loop"]
+    Feedback --> Build
+    Policy["Enterprise AI Policy"] -.-> Risk
+    Policy -.-> Release
+    Audit["Audit Evidence Store"] -.-> Release
+    Audit -.-> Monitor

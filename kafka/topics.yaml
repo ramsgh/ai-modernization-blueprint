@@ -1,0 +1,20 @@
+topics:
+  - name: erp.purchase_order.changed.v1
+    partitions: 12
+    replicationFactor: 3
+    config:
+      cleanup.policy: delete
+      retention.ms: "604800000"
+      min.insync.replicas: "2"
+  - name: erp.purchase_order.dlq.v1
+    partitions: 3
+    replicationFactor: 3
+    config:
+      cleanup.policy: delete
+      retention.ms: "1209600000"
+  - name: ai.embedding.requested.v1
+    partitions: 6
+    replicationFactor: 3
+    config:
+      cleanup.policy: delete
+      retention.ms: "259200000"
